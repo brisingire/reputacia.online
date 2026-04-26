@@ -1,10 +1,19 @@
 [
   {
+    "slug": "tasty-kebab-1995a217",
+    "company": "Tasty Kebab",
+    "createdAt": "2026-04-26T10:40:36.761Z",
+    "source": "live-scrape-gui",
+    "reviewsCount": 0,
+    "localPath": "tasty-kebab-1995a217/index.html",
+    "sourceUrl": "https://www.google.com/maps/place/Tasty+Kebab/data=!4m7!3m6!1s0x40aa850041434ee7:0xac7f92b9bf9b1d69!8m2!3d42.6950708!4d23.3175366!16s%2Fg%2F11x990tb7r!19sChIJ505DQQCFqkARaR2bv7mSf6w?authuser=0&hl=bg&rclk=1&gl=bg"
+  },
+  {
     "slug": "viktoria-s-5ce5dd8f",
     "company": "Viktoria S",
-    "createdAt": "2026-04-26T07:29:44.470Z",
+    "createdAt": "2026-04-26T10:36:46.197Z",
     "source": "live-scrape-gui",
-    "reviewsCount": 3,
+    "reviewsCount": 0,
     "localPath": "viktoria-s-5ce5dd8f/index.html",
     "sourceUrl": "https://www.google.com/maps/place/Viktoria+S/@42.6949423,23.3166897,17z/data=!4m15!1m8!3m7!1s0x40aa85bcbc3181cd:0xd1a538c43e8f8ec1!2sViktoria+S!8m2!3d42.6949423!4d23.3166897!10e9!16s%2Fg%2F11tdf79jhw!3m5!1s0x40aa85bcbc3181cd:0xd1a538c43e8f8ec1!8m2!3d42.6949423!4d23.3166897!16s%2Fg%2F11tdf79jhw?authuser=0&hl=bg&entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D&gl=bg"
   },
