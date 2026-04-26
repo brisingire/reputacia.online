@@ -1,5 +1,14 @@
 [
   {
+    "slug": "gora-restaurant-407ec767",
+    "company": "Gora Restaurant",
+    "createdAt": "2026-04-26T11:02:23.035Z",
+    "source": "live-scrape-gui",
+    "reviewsCount": 29,
+    "localPath": "gora-restaurant-407ec767/index.html",
+    "sourceUrl": "https://www.google.com/maps/place/Gora+Restaurant/@42.6561964,23.3203737,17z/data=!3m1!4b1!4m6!3m5!1s0x40aa85ae13261421:0xa2ef55d11cca959e!8m2!3d42.6561964!4d23.322954!16s%2Fg%2F11s9y7n49c?authuser=0&hl=bg&entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D&gl=bg"
+  },
+  {
     "slug": "tasty-kebab-50a00d4b",
     "company": "Tasty Kebab",
     "createdAt": "2026-04-26T10:51:45.257Z",
