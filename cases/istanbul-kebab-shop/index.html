@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Istanbul Kebab Shop | Loeschanfragen vorbereiten</title>
+    <style>
+      body { margin:0; font-family: Inter, system-ui, sans-serif; background:#f5f7fb; color:#0f172a; line-height:1.5; }
+      .container { width:min(1020px,92%); margin:0 auto; }
+      .top { padding:28px 0 16px; }
+      h1 { margin:0 0 8px; font-size:clamp(1.5rem,3vw,2.2rem); }
+      .muted { color:#475569; }
+      .panel { background:#fff; border:1px solid #d8e0ef; border-radius:14px; padding:16px; box-shadow:0 8px 24px rgba(15,23,42,.06); margin-bottom:16px; }
+      .grid { display:grid; gap:14px; grid-template-columns:1.25fr .9fr; align-items:start; }
+      .review-card { border:1px solid #d8e0ef; border-radius:12px; padding:12px; margin-bottom:10px; background:#fcfdff; }
+      .review-card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:8px; }
+      .review-head { display:flex; align-items:center; gap:8px; font-weight:600; margin:0; white-space:nowrap; }
+      .review-meta { margin:0; color:#334155; font-size:.92rem; text-align:right; }
+      .review-text { margin:0; white-space:pre-wrap; }
+      input, textarea { width:100%; box-sizing:border-box; border:1px solid #c4d0ea; border-radius:10px; padding:10px 12px; font:inherit; }
+      label.field { display:grid; gap:6px; font-weight:600; margin-bottom:10px; }
+      .checkbox { display:flex; gap:10px; align-items:flex-start; margin:10px 0; font-size:.95rem; color:#334155; }
+      .checkbox input { width:auto; margin-top:3px; }
+      .bulk-actions { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px; padding:10px 12px; border:1px solid #d8e0ef; border-radius:10px; background:#f8fbff; }
+      .reasons-wrap { margin:10px 0 14px; padding:10px 12px; border:1px solid #d8e0ef; border-radius:10px; background:#f8fbff; }
+      .reasons-wrap h3 { margin:0 0 8px; font-size:1rem; }
+      .reasons-grid { display:grid; gap:8px; }
+      .reasons-grid .checkbox { margin:0; }
+      .address-row { display:grid; grid-template-columns:2fr 1fr; gap:8px; }
+      .address-row-second { display:grid; grid-template-columns:1fr 2fr; gap:8px; }
+      button { width:100%; border:0; border-radius:10px; min-height:44px; font-weight:700; background:#0f3aa9; color:#fff; cursor:pointer; }
+      .small { font-size:.9rem; color:#64748b; }
+      .status { min-height:20px; margin-top:8px; }
+      @media (max-width:900px){
+        .grid{ grid-template-columns:1fr; }
+        .review-card-top { flex-direction:column; align-items:flex-start; }
+        .review-meta { text-align:left; }
+      }
+      @media (max-width:620px){
+        .address-row, .address-row-second { grid-template-columns:1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container top">
+      <h1>Loeschanfragen fuer Istanbul Kebab Shop</h1>
+      <p class="muted">Automatisch vorbereitete Auswahl moeglich angreifbarer Bewertungen (Stand: 25.4.2026, 15:00:24).</p>
+      <p class="small">Fall-ID: istanbul-kebab-shop • Quelle: <a href="https://www.google.com/maps/place/Istanbul+Kebab+Shop/@42.6993995,23.3179098,17z/data=!3m1!4b1!4m6!3m5!1s0x40aa85548d8e0977:0xf2ae75961a19e249!8m2!3d42.6993995!4d23.3204901!16s%2Fg%2F11sgqyky70?entry=ttu&amp;g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Google Maps Profil</a> • Filter: bis 2 Sterne</p>
+    </div>
+
+    <div class="container grid">
+      <section class="panel">
+        <h2>Gefundene negative Bewertungen</h2>
+        <div class="bulk-actions">
+          <label class="review-head">
+            <input type="checkbox" id="select-all-reviews" />
+            <span>Alle Bewertungen markieren</span>
+          </label>
+          <span class="small">18 Bewertung(en) gefunden</span>
+        </div>
+        
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="1" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor 8 Monaten • Huseyin</p>
+        </div>
+        <p class="review-text">Zunächst einmal schmeckt es furchtbar, und die Portion ist für den Preis viel zu klein. Auf dem Schild stand 4,60 €, aber drinnen verlangten sie 5,00 €. Als ich kein Getränk bestellte, hieß es nur: „Okay, dann können Sie es auch ohne Getränke essen.“ Was soll’s, ich esse es, wie ich will! Kurz gesagt: Ich kann es nicht empfehlen.</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="2" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>2 Sterne</strong> • vor einem Jahr • Barzaka</p>
+        </div>
+        <p class="review-text">Leider war der Döner ziemlich trocken und geschmacklos. Die große Portion war zwar reichlich, aber abgesehen vom Brot und ein paar Gemüsestücken schmeckte er eher wie ein Salat im Brot als wie ein Döner. Der Kellner bat mich um Soße, aber …</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="3" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor 3 Jahren • Веско Ненов</p>
+        </div>
+        <p class="review-text">Ich bestellte einen Döner im Brötchen – „Istanbul-Art“. Er hätte auf Englisch bestellt werden sollen, denn das wäre „besser“ gewesen. Vor mir diskutierte ein anderer Typ (mit Kappe – typisch) lautstark mit dem Besitzer (ich bin mir nicht …</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="4" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor 8 Monaten • Bayramali Mehmed</p>
+        </div>
+        <p class="review-text">Falsch, komplette Gauner, sie haben uns unser Mittagessen nicht geliefert, aber sie haben uns auch unser Geld nicht zurückgegeben.</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="5" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor 8 Monaten • Любомира Рашева</p>
+        </div>
+        <p class="review-text">Sehr schmutziger Ort, vorne ist Fett herumgelaufen, keine Hygiene.</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="6" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor einem Jahr • lubo rusinov</p>
+        </div>
+        <p class="review-text">Der schlechteste Döner, den ich je gegessen habe! Das Brötchen war halb roh, das Fleisch selbst staubtrocken. Der Unterschied zum normalen Döner besteht darin, dass das Brötchen beim Maxi-Döner verbogen ist und dafür 3 Lewa extra berechnet …</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="7" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor einem Jahr • Ivo Tanev</p>
+        </div>
+        <p class="review-text">Ein furchtbar trockener Döner! Kaum Zutaten drin, fast keine Soße... für 9 Lewa isst man buchstäblich nur Brot!</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="8" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>2 Sterne</strong> • vor 3 Jahren • Стефан Павлов</p>
+        </div>
+        <p class="review-text">Der Döner war mittelmäßig. Ich habe dreimal nach „schärfer“ gefragt, aber der Typ hat nichts Scharfes dazugegeben, weil er kein Wort Bulgarisch spricht.</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="9" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>2 Sterne</strong> • vor 2 Jahren • Andrew Berg</p>
+        </div>
+        <p class="review-text">Geschmackloses und halbrohes Hühnerfleisch. Hat nichts mit echten Istanbuler Dönerläden gemein. Würde ich nicht wieder besuchen.</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="10" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor 2 Jahren • Marko Jermaniš (RengX)</p>
+        </div>
+        <p class="review-text">Es hieß, sie hätten bis 20 Uhr geöffnet. Ich war um 19:25 Uhr dort und es war geschlossen.</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="11" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor 2 Jahren • Radoslav Zivanov</p>
+        </div>
+        <p class="review-text">Der schlechteste Döner, den ich je gegessen habe, und dann haben sie mich auch noch um 4 Dollar betrogen. Absolut nicht empfehlenswert.</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="12" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor einem Jahr • Tsvetelin Desev</p>
+        </div>
+        <p class="review-text">Chetchup statt Knoblauchsauce...</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="13" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor 3 Jahren • schnitzel</p>
+        </div>
+        <p class="review-text">Sie haben vergessen, Soße hinzuzufügen, was alles völlig ruiniert hat ...</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="14" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • Bearbeitet: vor 2 Jahren • Johnny2puncher</p>
+        </div>
+        <p class="review-text">Schlechte Einstellung des Personals und das Essen war nicht gut</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="15" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>2 Sterne</strong> • vor einem Jahr • Alexander Minev</p>
+        </div>
+        <p class="review-text">Das Fleisch war alt oder roh.</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="16" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor einem Jahr • Selimi Bejtula</p>
+        </div>
+        <p class="review-text">Lieber Selimi, wir würden gerne wissen, warum wir nur einen Stern erhalten haben. Falls Sie nicht zufrieden sind, würden wir gerne den Grund erfahren. Vielen Dank im Voraus. Mit freundlichen Grüßen</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="17" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor 2 Jahren • NikMonster69</p>
+        </div>
+        <p class="review-text">Warum ist das Herr Monster?</p>
+      </article>
+      <article class="review-card">
+        <div class="review-card-top">
+          <label class="review-head">
+            <input type="checkbox" name="selectedReviews" value="18" class="review-checkbox" />
+            <span>Auswaehlen</span>
+          </label>
+          <p class="review-meta"><strong>1 Sterne</strong> • vor einer Woche • dete kafka</p>
+        </div>
+        <p class="review-text">Trockener Döner mit Ketchup. Was für eine Beleidigung für einen echten türkischen Döner! 🙄 …</p>
+      </article>
+      </section>
+
+      <aside class="panel">
+        <h2>Verbindlich beauftragen</h2>
+        <form action="https://formspree.io/f/meevnwql" method="POST">
+          <input type="hidden" name="_next" value="https://reputacia.online/thanks.html" />
+          <input type="hidden" name="_subject" value="Neue Beauftragung Istanbul Kebab Shop (istanbul-kebab-shop)" />
+          <input type="hidden" name="caseSlug" value="istanbul-kebab-shop" />
+          <input type="hidden" name="companyRef" value="Istanbul Kebab Shop" />
+
+          <label class="field">Name der vertretungsberechtigten Person
+            <input type="text" name="ownerName" required />
+          </label>
+          <label class="field">Unternehmen
+            <input type="text" name="companyName" required value="Istanbul Kebab Shop" />
+          </label>
+          <div class="address-row">
+            <label class="field">Strasse
+              <input type="text" name="street" required />
+            </label>
+            <label class="field">Hausnummer
+              <input type="text" name="houseNumber" required />
+            </label>
+          </div>
+          <div class="address-row-second">
+            <label class="field">PLZ
+              <input type="text" name="postalCode" required />
+            </label>
+            <label class="field">Stadt
+              <input type="text" name="city" required />
+            </label>
+          </div>
+          <label class="field">E-Mail
+            <input type="email" name="email" required />
+          </label>
+          <div class="reasons-wrap">
+            <h3>Grund fuer den Loeschantrag (fuer alle ausgewaehlten Bewertungen)</h3>
+            <div class="reasons-grid">
+              <label class="checkbox">
+                <input type="checkbox" name="reasons[]" value="Unwahre Tatsachenbehauptung" />
+                <span>Unwahre bzw. falsche Tatsachenbehauptung</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="reasons[]" value="Kein Kundenkontakt" />
+                <span>Kunde konnte nicht in der Kundendatenbank gefunden werden</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="reasons[]" value="Beleidigung / Diffamierung" />
+                <span>Beleidigung / Diffamierung</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="reasons[]" value="Spam / Fake" />
+                <span>Spam / Fake-Bewertung</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="reasons[]" value="Datenschutz / persoenliche Daten" />
+                <span>Datenschutzverletzung / persoenliche Daten</span>
+              </label>
+            </div>
+          </div>
+          <label class="field">Hinweis / Nachweise (optional)
+            <textarea name="note" rows="4"></textarea>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="consentAuthority" required />
+            <span>Ich bestaetige die Vertretungsberechtigung und bevollmaechtige ReputaLex Bulgaria fuer diese Loeschanfragen.</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="consentCosts" required />
+            <span>Ich beauftrage die ausgewaehlten Loeschanfragen kostenpflichtig gemaess Vereinbarung.</span>
+          </label>
+          <button type="submit">Kostenpflichtig beauftragen</button>
+          <p class="small">Nach Versand erhalten Sie die Bestaetigung per E-Mail.</p>
+        </form>
+        <p class="status"></p>
+      </aside>
+    </div>
+    <script>
+      const selectAll = document.getElementById("select-all-reviews");
+      const reviewChecks = Array.from(document.querySelectorAll(".review-checkbox"));
+      if (selectAll) {
+        selectAll.addEventListener("change", () => {
+          for (const checkbox of reviewChecks) {
+            checkbox.checked = selectAll.checked;
+          }
+        });
+      }
+      for (const checkbox of reviewChecks) {
+        checkbox.addEventListener("change", () => {
+          if (!selectAll) return;
+          const allSelected = reviewChecks.length > 0 && reviewChecks.every((item) => item.checked);
+          selectAll.checked = allSelected;
+        });
+      }
+    </script>
+  </body>
+</html>

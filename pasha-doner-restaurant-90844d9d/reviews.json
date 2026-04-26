@@ -1,0 +1,12 @@
+{
+  "sourceUrl": "https://www.google.com/maps/place/Pasha+D%C3%B6ner+%26+Restaurant+-+%D0%A2%D1%83%D1%80%D1%81%D0%BA%D0%B0+%D0%BA%D1%83%D1%85%D0%BD%D1%8F/@42.6996285,23.2275845,13z/data=!4m12!1m2!2m1!1zZMO2bmVy!3m8!1s0x40aa85001cd0b963:0x947c98602f0891e7!8m2!3d42.6996285!4d23.3038022!9m1!1b1!15sCgZkw7ZuZXJaCCIGZMO2bmVykgESdHVya2lzaF9yZXN0YXVyYW504AEA!16s%2Fg%2F11y6f_05hk?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D",
+  "scrapedAt": "2026-04-25T14:47:11.073Z",
+  "maxRating": 2,
+  "mode": "scan-all-reviews",
+  "totalLoadedCards": 0,
+  "sortAttemptedLowest": false,
+  "count": 0,
+  "reviews": [],
+  "savedTo": "/Users/jonasamthor1/Downloads/review-agency-starter/bad-reviews.json",
+  "launchMode": "headless-fallback"
+}

@@ -1,0 +1,29 @@
+{
+  "sourceUrl": "https://www.google.com/maps/place/Viktoria+S/@42.6949423,23.3166897,17z/data=!4m15!1m8!3m7!1s0x40aa85bcbc3181cd:0xd1a538c43e8f8ec1!2sViktoria+S!8m2!3d42.6949423!4d23.3166897!10e9!16s%2Fg%2F11tdf79jhw!3m5!1s0x40aa85bcbc3181cd:0xd1a538c43e8f8ec1!8m2!3d42.6949423!4d23.3166897!16s%2Fg%2F11tdf79jhw?authuser=0&hl=bg&entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D&gl=bg",
+  "scrapedAt": "2026-04-26T07:29:44.353Z",
+  "maxRating": 2,
+  "mode": "scan-all-reviews",
+  "totalLoadedCards": 34,
+  "sortAttemptedLowest": false,
+  "count": 3,
+  "reviews": [
+    {
+      "author": "Рядка Порода (Rare Breed)",
+      "rating": 1,
+      "when": "преди година",
+      "text": "Винаги разпадащи се дюнери, със кости и боклуци вътре понякога. А днес даже видях с очите си как месото падна от хладилника на земята, което утре ще ви продават. Няколко пъти давах шанс на това място, но няма смисъл . . . Пълен ужас!"
+    },
+    {
+      "author": "K. D.",
+      "rating": 1,
+      "when": "преди година",
+      "text": "Нехигиенично, имам хранително отравяне от дюнер. Сега съм цял ден на тоалетната заради вас"
+    },
+    {
+      "author": "Plamen Debreliev",
+      "rating": 1,
+      "when": "преди 4 седмици",
+      "text": "Ядох голям дюнер и цял ден ме скъса корема. Дюнера беше удавен в сос и всичко изпада при отварянето"
+    }
+  ]
+}

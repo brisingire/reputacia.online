@@ -1,0 +1,30 @@
+{
+  "sourceUrl": "https://www.google.com/maps/place/Viktoria+S/data=!4m7!3m6!1s0x40aa85bcbc3181cd:0xd1a538c43e8f8ec1!8m2!3d42.6949423!4d23.3166897!16s%2Fg%2F11tdf79jhw!19sChIJzYExvLyFqkARwY6PPsQ4pdE?authuser=0&hl=de&rclk=1",
+  "scrapedAt": "2026-04-26T06:32:23.199Z",
+  "maxRating": 2,
+  "mode": "scan-all-reviews",
+  "totalLoadedCards": 34,
+  "sortAttemptedLowest": false,
+  "count": 3,
+  "reviews": [
+    {
+      "author": "Рядка Порода (Rare Breed)",
+      "rating": 1,
+      "when": "vor einem Jahr",
+      "text": "Die Döner sind immer total zerfallen, manchmal sogar mit Knochen und Müll drin. Und heute habe ich sogar mit eigenen Augen gesehen, wie das Fleisch aus dem Kühlschrank auf den Boden gefallen ist – das wollen sie einem morgen verkaufen. Ich habe diesem Laden mehrmals eine Chance gegeben, aber es hat keinen Sinn … Einfach nur grauenhaft!"
+    },
+    {
+      "author": "K. D.",
+      "rating": 1,
+      "when": "vor einem Jahr",
+      "text": "Unhygienisch, ich habe mir vom Döner eine Lebensmittelvergiftung geholt. Jetzt sitze ich wegen dir den ganzen Tag auf der Toilette."
+    },
+    {
+      "author": "Plamen Debreliev",
+      "rating": 1,
+      "when": "vor 4 Wochen",
+      "text": "Ich habe einen großen Döner gegessen und hatte den ganzen Tag Bauchschmerzen. Der Döner war in Soße ertränkt, und beim Öffnen fiel alles heraus."
+    }
+  ],
+  "savedTo": "/Users/jonasamthor1/Downloads/review-agency-starter/bad-reviews.json"
+}

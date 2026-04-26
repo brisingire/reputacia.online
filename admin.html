@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReputaLex Bulgaria | Adminbereich Analyse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="./index.html#home" class="brand">
+          <img
+            class="brand-logo"
+            src="./assets/logo-reputacia-online-cropped.png?v=2"
+            alt="reputacia.online"
+            width="937"
+            height="355"
+            decoding="async"
+          />
+        </a>
+        <nav>
+          <a href="./index.html#services">Leistungen</a>
+          <a href="./index.html#client-intake">Kontakt</a>
+          <a href="./admin.html" class="button button-primary button-nav">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="admin-title">Adminbereich: Unternehmensanalyse starten</h1>
+          <p class="section-intro">
+            Google-Maps-Profil eingeben, Analyse starten und einen individuellen
+            Kundenlink erzeugen.
+          </p>
+          <div class="admin-tools">
+            <a
+              class="button button-primary button-icon"
+              href="http://localhost:4180"
+              target="_blank"
+              rel="noopener"
+              >🕷️ Scraper starten</a
+            >
+            <p class="small-note">
+              Oeffnet das lokale Scraper-Tool. Falls nicht erreichbar, zuerst
+              <code>npm run scrape:gui</code> starten.
+            </p>
+          </div>
+
+          <div class="form-wrapper">
+            <form id="admin-analyze-form" class="intake-form">
+              <label>
+                Google Places API Key
+                <input
+                  type="password"
+                  id="google-api-key"
+                  name="googleApiKey"
+                  required
+                  placeholder="AIza..."
+                />
+              </label>
+              <label>
+                Google-Maps-URL des Unternehmens
+                <input
+                  type="url"
+                  id="maps-url"
+                  name="mapsUrl"
+                  required
+                  placeholder="https://www.google.com/maps/place/..."
+                />
+              </label>
+              <label>
+                Kundenname (optional)
+                <input
+                  type="text"
+                  id="client-name"
+                  name="clientName"
+                  placeholder="z. B. East Chinese Restaurant"
+                />
+              </label>
+              <button type="submit" class="button button-primary">
+                Analyse starten
+              </button>
+              <p class="small-note">
+                Hinweis: Fuer reale Bewertungen wird ein gueltiger Google Places
+                API Key benoetigt.
+              </p>
+              <p id="admin-status" class="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div class="form-wrapper" style="margin-top: 1rem">
+            <h2>Scraping-Ergebnis direkt importieren</h2>
+            <p class="small-note">
+              Nutzen Sie das JSON aus dem Scraper-GUI, um sofort eine
+              bestellbare Kundenseite zu erzeugen.
+            </p>
+            <form id="admin-import-form" class="intake-form">
+              <label>
+                Unternehmensname
+                <input
+                  type="text"
+                  id="import-company-name"
+                  name="companyName"
+                  required
+                  placeholder="z. B. Meat The Greeks"
+                />
+              </label>
+              <label>
+                Scraper JSON-Datei (optional)
+                <input type="file" id="import-json-file" accept=".json,application/json" />
+              </label>
+              <label>
+                Oder Scraper JSON einfuegen
+                <textarea
+                  id="import-json-text"
+                  rows="8"
+                  placeholder='{"sourceUrl":"...","reviews":[...]}'
+                ></textarea>
+              </label>
+              <button type="submit" class="button button-primary">
+                Kundenseite aus Scraping erstellen
+              </button>
+              <p id="import-status" class="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div id="admin-result" class="admin-result hidden">
+            <h2>Analyse abgeschlossen</h2>
+            <p class="small-note">
+              Der personalisierte Kundenbereich wurde erstellt. Link fuer den
+              Versand an den Kunden:
+            </p>
+            <p>
+              <a id="customer-link" href="#" target="_blank" rel="noopener"></a>
+            </p>
+            <div class="hero-actions">
+              <a
+                id="open-customer-link"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="button button-primary"
+                >Kundenbereich oeffnen</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./admin.js"></script>
+  </body>
+</html>
