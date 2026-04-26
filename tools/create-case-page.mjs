@@ -5,15 +5,30 @@ import crypto from "node:crypto";
 import { scrapeBadReviews } from "./scrape-core.mjs";
 
 const DEFAULT_FORM_ACTION = "https://formspree.io/f/meevnwql";
-const DEFAULT_PUBLIC_BASE = "https://reputacia.online";
-export const CASE_TEMPLATE_VERSION = "2026-04-26-bg-v1";
+/** Live site origin for generated links (override with --base-url or PUBLIC_SITE_URL). */
+export const DEFAULT_PUBLIC_BASE = "https://reputacia.online";
+export const CASE_TEMPLATE_VERSION = "2026-04-26-bg-v2";
 
-function resolveThanksRedirectUrl(baseUrl = "") {
+function envPublicBase() {
+  const raw = String(process.env.PUBLIC_SITE_URL || "").trim();
+  return raw ? raw.replace(/\/$/, "") : "";
+}
+
+export function resolvePublicBaseUrl(baseUrl = "") {
   const trimmed = String(baseUrl || "").trim();
   if (trimmed) {
-    return `${trimmed.replace(/\/$/, "")}/thanks.html`;
+    return trimmed.replace(/\/$/, "");
   }
-  return `${DEFAULT_PUBLIC_BASE.replace(/\/$/, "")}/thanks.html`;
+  const fromEnv = envPublicBase();
+  if (fromEnv) {
+    return fromEnv;
+  }
+  return DEFAULT_PUBLIC_BASE.replace(/\/$/, "");
+}
+
+function resolveThanksRedirectUrl(baseUrl = "") {
+  const base = resolvePublicBaseUrl(baseUrl);
+  return `${base}/thanks.html`;
 }
 
 function getArg(name, fallback = "") {
@@ -89,6 +104,7 @@ function renderCasePage({
   sourceUrl,
   formAction,
   thanksRedirectUrl,
+  canonicalCasePageUrl,
   maxRating,
   reviews,
   scrapedAt,
@@ -295,7 +311,7 @@ function renderCasePage({
           )})" />
           <input type="hidden" name="caseSlug" value="${escapeHtml(slug)}" />
           <input type="hidden" name="companyRef" value="${escapeHtml(company)}" />
-          <input type="hidden" name="casePageUrl" id="case-page-url" />
+          <input type="hidden" name="casePageUrl" id="case-page-url" value="${escapeHtml(canonicalCasePageUrl)}" />
           <input type="hidden" name="sourceMapsUrl" value="${escapeHtml(sourceUrl || "")}" />
           <input type="hidden" name="selectedReviewDetails" id="selected-review-details" />
 
@@ -469,7 +485,7 @@ function renderCasePage({
         } catch {}
       };
 
-      if (casePageUrlEl) {
+      if (casePageUrlEl && !String(casePageUrlEl.value || "").trim()) {
         casePageUrlEl.value = window.location.href;
       }
 
@@ -605,6 +621,9 @@ export async function createCasePageFromPayload({
   await fs.mkdir(caseDir, { recursive: true });
 
   const caseReviews = Array.isArray(scrapePayload?.reviews) ? scrapePayload.reviews : [];
+  const publicPath = `/${relativeDir.replaceAll("\\", "/")}/`;
+  const publicBase = resolvePublicBaseUrl(baseUrl);
+  const publicUrl = `${publicBase}${publicPath}`;
   const thanksRedirectUrl = resolveThanksRedirectUrl(baseUrl);
   const pageHtml = renderCasePage({
     company: safeCompany,
@@ -612,6 +631,7 @@ export async function createCasePageFromPayload({
     sourceUrl: scrapePayload?.sourceUrl || "",
     formAction,
     thanksRedirectUrl,
+    canonicalCasePageUrl: publicUrl,
     maxRating,
     reviews: caseReviews,
     scrapedAt: scrapePayload?.scrapedAt || new Date().toISOString(),
@@ -631,9 +651,6 @@ export async function createCasePageFromPayload({
   };
   await upsertCasesRegistry(registryEntry);
 
-  const publicPath = `/${relativeDir.replaceAll("\\", "/")}/`;
-  const publicUrl = baseUrl ? `${baseUrl.replace(/\/$/, "")}${publicPath}` : "";
-
   return {
     slug: safeSlug,
     reviewsCount: caseReviews.length,
@@ -649,7 +666,7 @@ async function run() {
   const companyArg = getArg("company");
   const slugArg = getArg("slug");
   const fromJson = getArg("from-json");
-  const baseUrl = getArg("base-url", "");
+  const baseUrl = getArg("base-url", DEFAULT_PUBLIC_BASE);
   const formAction = getArg("form-action", DEFAULT_FORM_ACTION);
   const maxRating = toNumber(getArg("max-rating", "2"), 2);
   const limit = toNumber(getArg("limit", "80"), 80);
@@ -705,12 +722,10 @@ async function run() {
   console.log("Case page created successfully.");
   console.log(`- Local page: ${created.localPagePath}`);
   console.log(`- Reviews JSON: ${created.localReviewsPath}`);
-  if (created.publicUrl) {
-    console.log(`- Public URL: ${created.publicUrl}`);
-  } else {
-    console.log(`- Public path: ${created.publicPath}`);
-    console.log("  Tip: pass --base-url=https://your-domain.tld for full links.");
-  }
+  console.log(`- Public URL: ${created.publicUrl}`);
+  console.log(
+    "  Tip: override with --base-url=https://other.example (or env PUBLIC_SITE_URL).",
+  );
 }
 
 const isDirectExecution =

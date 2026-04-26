@@ -1,5 +1,6 @@
 import express from "express";
 import { scrapeBadReviews } from "./scrape-core.mjs";
+import { DEFAULT_PUBLIC_BASE } from "./create-case-page.mjs";
 
 const app = express();
 const PORT = Number(process.env.SCRAPER_PORT || 4180);
@@ -119,8 +120,7 @@ async function runScrapeJob(jobId, payload) {
       ...result,
       templateVersion: casePageModule.CASE_TEMPLATE_VERSION || "unknown",
       createdPage,
-      customerPageUrl:
-        createdPage.publicUrl || `http://localhost:5501${createdPage.publicPath}`,
+      customerPageUrl: createdPage.publicUrl,
     };
 
     job.status = "done";
@@ -195,8 +195,8 @@ app.get("/", (_req, res) => {
         Ohne Browserfenster laufen (stabiler, empfohlen)
       </label>
       <label>
-        Basis-URL der Live-Seite (optional)
-        <input id="baseUrl" type="text" placeholder="https://reviewloeschen.de" />
+        Basis-URL der Live-Seite (Standard: reputacia.online)
+        <input id="baseUrl" type="text" placeholder="https://reputacia.online" value="https://reputacia.online" />
       </label>
       <button id="start">Start Scrape</button>
       <div id="status" class="status"></div>
@@ -329,7 +329,8 @@ app.post("/api/scrape/start", async (req, res) => {
     const trySortLowest = Boolean(req.body?.trySortLowest);
     const headless = Boolean(req.body?.headless);
     const companyInput = String(req.body?.company || "").trim();
-    const baseUrl = String(req.body?.baseUrl || "").trim();
+    const baseUrlRaw = String(req.body?.baseUrl || "").trim();
+    const baseUrl = baseUrlRaw || DEFAULT_PUBLIC_BASE;
 
     if (!url) {
       return res.status(400).json({ error: "Missing url" });

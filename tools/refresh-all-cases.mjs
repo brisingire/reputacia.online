@@ -1,7 +1,10 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
-import { createCasePageFromPayload } from "./create-case-page.mjs";
+import {
+  createCasePageFromPayload,
+  DEFAULT_PUBLIC_BASE,
+} from "./create-case-page.mjs";
 
 async function readJsonSafe(filePath) {
   try {
@@ -24,7 +27,8 @@ async function run() {
   const projectRoot = process.cwd();
   const registryPath = path.resolve(projectRoot, "cases", "index.json");
   const baseUrlArg =
-    process.argv.find((arg) => arg.startsWith("--base-url="))?.split("=")[1] || "";
+    process.argv.find((arg) => arg.startsWith("--base-url="))?.split("=")[1] ||
+    DEFAULT_PUBLIC_BASE;
 
   const registry = await readJsonSafe(registryPath);
   if (!Array.isArray(registry) || registry.length === 0) {
